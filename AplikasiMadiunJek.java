@@ -1,9 +1,9 @@
-public class AplikasiMadiun{
+public class AplikasiMadiunJek{
     public static void main(String[] args) {
         LayananTransportasi[] layanan = new LayananTransportasi[2];
 
         layanan[0] = new MadiunMotor("Budi", 10, 50000);
-        layanan[1] = new MadiunMobil("Andi", 5, 100000, 3); // NIM akhir = 03
+        layanan[1] = new MadiunMobil("Andi", 5, 100000, 3); 
 
         for (LayananTransportasi l : layanan) {
             double tarif = l.hitungTarif();

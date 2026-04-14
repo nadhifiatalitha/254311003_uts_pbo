@@ -1,4 +1,4 @@
-public class AplikasiMadiunJek {
+public class AplikasiMadiun{
     public static void main(String[] args) {
         LayananTransportasi[] layanan = new LayananTransportasi[2];
 

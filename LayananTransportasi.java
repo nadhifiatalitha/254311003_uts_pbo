@@ -31,3 +31,30 @@ public abstract class LayananTransportasi {
         return saldoUser >= totalBayar;
     }
 }
+class MadiunMotor extends LayananTransportasi {
+    public MadiunMotor(String namaDriver, double jarak, double saldoUser) {
+        super(namaDriver, jarak, saldoUser);
+    }
+
+    @Override
+    public double hitungTarif() {
+        return jarak * 2500.0;
+    }
+
+    public void prosesTransaksi() {
+        String namaLengkap = "Nadhifiatalitha";
+        String nim = "254311003";
+
+        System.out.println("=== Transaksi oleh " + namaLengkap + " - " + nim + " ===");
+        double totalBayar = hitungTarif();
+        if (isSaldoCukup(totalBayar)) {
+            saldoUser -= totalBayar;
+            System.out.println("Driver: " + namaDriver);
+            System.out.println("Jarak: " + jarak + " km");
+            System.out.println("Total Bayar: Rp " + totalBayar);
+            System.out.println("Sisa Saldo: Rp " + saldoUser);
+        } else {
+            System.out.println("Gagal: Saldo tidak mencukupi untuk perjalanan ini!");
+        }
+    }
+}
